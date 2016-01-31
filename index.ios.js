@@ -1,8 +1,3 @@
-/**
- * AlipayAppUI
- * https://github.com/superRaytin/alipay-app-ui
- */
-
 'use strict';
 
 import React, {
