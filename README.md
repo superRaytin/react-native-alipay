@@ -24,7 +24,7 @@
 
 # 安装
 
-## 第一步：下载项目
+### 第一步：下载项目
 
 ```sh
 $ git clone https://github.com/superRaytin/alipay-app-ui.git
@@ -32,9 +32,9 @@ $ cd alipay-app-ui
 $ npm install
 ```
 
-## 第二步：安装图标字体
+### 第二步：安装图标字体
 
-### IOS
+#### IOS
 
 - 打开 Xcode，在项目上右键并选择 **Add files to "AlipayAppUI"**，选择 `node_modules/react-native-vector-icons` 下的 `Fonts` 文件夹，勾选文件对话框下的 **Add to targets** 和 **Create groups**
 - 编辑 `Info.plist` 添加一行，命名为 **Fonts provided by application**，将上一步选择的字体文件依次添加进来，像下面这样：
@@ -46,7 +46,7 @@ $ npm install
 
 # 运行
 
-### IOS
+#### IOS
 
 - `$ open ios/AlipayAppUI.xcodeproj/`
 - 在打开的 Xcode 左上角有一个 `build and run` 按钮，点击之后创建一个 IOS 模拟器
