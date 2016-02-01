@@ -38,7 +38,9 @@ $ npm install
 
 - 打开 Xcode，在项目上右键并选择 **Add files to "AlipayAppUI"**，选择 `node_modules/react-native-vector-icons` 下的 `Fonts` 文件夹，勾选文件对话框下的 **Add to targets** 和 **Create groups**
 - 编辑 `Info.plist` 添加一行，命名为 **Fonts provided by application**，将上一步选择的字体文件依次添加进来，像下面这样：
+
 ![xcode](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
+
 - 在 **Libraries** 目录右键并选择 **Add files to "AlipayAppUI"**，选择 `node_modules/react-native-vector-icons/NVectorIcons.xcodeproj`
 - 选中项目根文件夹，将 `libRNVectorIcons.a` 添加进 **Build Phases** 选项卡下的 **Link Binary With Libraries**
 
