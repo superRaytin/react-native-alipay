@@ -7,6 +7,7 @@ const styles = StyleSheet.create(assign({
   container: {
     flex: 1,
     backgroundColor: '#F5F5F9',
+    marginBottom: 50
   },
   title: {
     height: 50,
