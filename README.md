@@ -41,7 +41,7 @@ $ npm install
 
 ![xcode](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
-- 在 **Libraries** 目录右键并选择 **Add files to "AlipayAppUI"**，选择 `node_modules/react-native-vector-icons/NVectorIcons.xcodeproj`
+- 在 **Libraries** 目录右键并选择 **Add files to "AlipayAppUI"**，选择 `node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj`
 - 选中项目根文件夹，将 `libRNVectorIcons.a` 添加进 **Build Phases** 选项卡下的 **Link Binary With Libraries**
 
 或者参考 [react-native-vector-icons#ios](https://github.com/oblador/react-native-vector-icons#ios) 安装
