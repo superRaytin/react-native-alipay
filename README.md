@@ -58,6 +58,8 @@ $ npm install
 
 欢迎任何形式的贡献，包括但不限于新功能，Bug 修复，文档。
 
+> 由于要实现的功能比较多，欢迎有兴趣的朋友加入一起完善，目标是无限接近支付宝钱包的体验 :)
+
 [贡献者](https://github.com/superRaytin/alipay-app-ui/graphs/contributors)
 
 ---
