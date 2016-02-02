@@ -54,9 +54,15 @@ $ npm install
 - 在打开的 Xcode 左上角有一个 `build and run` 按钮，点击之后创建一个 IOS 模拟器
 - 启动成功
 
+# 贡献
+
+欢迎任何形式的贡献，包括但不限于新功能，Bug 修复，文档。
+
+[贡献者](https://github.com/superRaytin/alipay-app-ui/graphs/contributors)
+
 ---
 
-> 部分图标来自 [iconfont](http://www.iconfont.cn/)，相关版权归支付宝公司所有。
+部分图标来自 [iconfont](http://www.iconfont.cn/)，相关版权归支付宝公司所有。
 
 # License
 本项目基于 MIT 协议发布
