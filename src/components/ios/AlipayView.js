@@ -40,7 +40,7 @@ class AlipayView extends Component {
             </View>
           </View>
           <ScrollView contentContainerStyle={styles.scrollContainer}
-                      automaticallyAdjustContentInsets={false}>
+                      automaticallyAdjustContentInsets={true}>
             <View key="content" style={styles.content}>
               <View key="app" style={styles.app}>
                 <View key="appRow-1" style={styles.appRow}>
