@@ -32,7 +32,8 @@ const styles = StyleSheet.create(assign({
 }, {
   scrollContainer: {
     backgroundColor: '#F5F5F9',
-    paddingBottom: 0,
+    paddingBottom: 15,
+    marginTop: -20,
   },
 }, {
   topBar: {
