@@ -26,7 +26,6 @@
 		A41007871C5CFEDF00632D74 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A410077E1C5CFEDF00632D74 /* EvilIcons.ttf */; };
 		A41007881C5CFEDF00632D74 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A410077F1C5CFEDF00632D74 /* FontAwesome.ttf */; };
 		A41007891C5CFEDF00632D74 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41007801C5CFEDF00632D74 /* Foundation.ttf */; };
-		A410078A1C5CFEDF00632D74 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41007811C5CFEDF00632D74 /* iconfont.ttf */; };
 		A410078B1C5CFEDF00632D74 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41007821C5CFEDF00632D74 /* Ionicons.ttf */; };
 		A410078C1C5CFEDF00632D74 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41007831C5CFEDF00632D74 /* MaterialIcons.ttf */; };
 		A410078D1C5CFEDF00632D74 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A41007841C5CFEDF00632D74 /* Octicons.ttf */; };
@@ -147,7 +146,6 @@
 		A410077E1C5CFEDF00632D74 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		A410077F1C5CFEDF00632D74 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		A41007801C5CFEDF00632D74 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		A41007811C5CFEDF00632D74 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		A41007821C5CFEDF00632D74 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		A41007831C5CFEDF00632D74 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		A41007841C5CFEDF00632D74 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 				A410077E1C5CFEDF00632D74 /* EvilIcons.ttf */,
 				A410077F1C5CFEDF00632D74 /* FontAwesome.ttf */,
 				A41007801C5CFEDF00632D74 /* Foundation.ttf */,
-				A41007811C5CFEDF00632D74 /* iconfont.ttf */,
 				A41007821C5CFEDF00632D74 /* Ionicons.ttf */,
 				A41007831C5CFEDF00632D74 /* MaterialIcons.ttf */,
 				A41007841C5CFEDF00632D74 /* Octicons.ttf */,
@@ -575,7 +572,6 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				A41007881C5CFEDF00632D74 /* FontAwesome.ttf in Resources */,
 				A410078B1C5CFEDF00632D74 /* Ionicons.ttf in Resources */,
-				A410078A1C5CFEDF00632D74 /* iconfont.ttf in Resources */,
 				A41007871C5CFEDF00632D74 /* EvilIcons.ttf in Resources */,
 				A410078E1C5CFEDF00632D74 /* Zocial.ttf in Resources */,
 				A410078C1C5CFEDF00632D74 /* MaterialIcons.ttf in Resources */,
