@@ -9,18 +9,21 @@ import React, {
 } from 'react-native';
 
 import assign from 'object-assign';
+import TopBar from './common/TopBar';
 import styles from '../../styles';
 
-var Icon = require('react-native-vector-icons/FontAwesome');
+const Icon = require('react-native-vector-icons/FontAwesome');
+const fileTextIcon = (<Icon name="file-text-o" size={20} color="#FFFFFF"></Icon>);
 
-// 首页
 class AlipayView extends Component {
   render() {
+    const bill = (
+        <Text key="topBarBill" style={styles.topBarBill}>{fileTextIcon}&nbsp;&nbsp;账单</Text>
+    );
+
     return (
         <View style={styles.container}>
-          <View key="topBar" style={styles.topBar}>
-            <Text key="topBarBack" style={styles.topBarBack}>&lt; 账单</Text>
-          </View>
+          <TopBar leftBtn={bill} />
           <View key="quickEntry" style={styles.quickEntry}>
             <View key="scan" style={styles.quickEntryItem}>
               <Image source={require('../../images/iconfont-scan.png')} style={styles.quickEntryItemIcon} />

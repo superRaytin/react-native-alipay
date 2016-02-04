@@ -8,18 +8,22 @@ import React, {
 } from 'react-native';
 
 import styles from '../../styles';
+import TopBar from './common/TopBar';
 
+const MaterialIcons = require('react-native-vector-icons/MaterialIcons');
 var Icon = require('react-native-vector-icons/FontAwesome');
+var fileTextIcon = (<Icon name="file-text-o" size={20} color="#FFFFFF"></Icon>);
+var locationIcon = (<MaterialIcons name="room" size={20} color="#FFFFFF"></MaterialIcons>);
 
 class KoubeiView extends Component {
   render() {
+    const city = (
+        <Text key="topBarLocation" style={styles.topBarLocation}>{locationIcon}&nbsp;&nbsp;杭州</Text>
+    );
+
     return (
         <View style={styles.container}>
-          <View key="topBar" style={styles.topBar}>
-            <Text key="topBarBack" style={styles.topBarBack}>&lt; 返回</Text>
-            <Text key="topBarTitle" style={styles.topBarTitle}>口碑</Text>
-            <Text key="topBarOptions" style={styles.topBarOptions}>选项</Text>
-          </View>
+          <TopBar leftBtn={city} />
           <View key="content" style={styles.content}>
             <Text key="1" style={styles.welcome}>
               口碑

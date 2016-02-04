@@ -37,15 +37,29 @@ const styles = StyleSheet.create(assign({
   },
 }, {
   topBar: {
-    height: 55,
+    height: 65,
     flexDirection: 'row',
     backgroundColor: '#3F454F',
-    paddingTop: 30
+    paddingTop: 33,
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
+  topBarLocation: {
+    width: 60,
+    textAlign: 'center',
+    fontSize: 14,
+    color: '#fff'
+  },
+  topBarBill: {
+    width: 60,
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#fff'
   },
   topBarBack: {
     width: 60,
     textAlign: 'center',
-    fontSize: 12,
+    fontSize: 16,
     color: '#fff'
   },
   topBarTitle: {
@@ -55,18 +69,20 @@ const styles = StyleSheet.create(assign({
     fontWeight: 'bold',
     color: '#fff'
   },
+  topBarIcon: {
+
+  },
   topBarOptions: {
     width: 60,
-    textAlign: 'center',
-    fontSize: 12,
-    color: '#fff'
+    flex: 1,
+    alignItems: 'flex-end',
   },
 }, {
   quickEntry: {
     flexDirection: 'row',
     backgroundColor: '#3F454F',
-    height: 100,
-    paddingTop: 10
+    height: 90,
+    paddingTop: 0
   },
   quickEntryItem: {
     padding: 10,
