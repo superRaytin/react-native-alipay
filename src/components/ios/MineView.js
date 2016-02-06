@@ -10,7 +10,7 @@ import React, {
 import styles from '../../styles';
 import TopBar from './common/TopBar';
 
-var Icon = require('react-native-vector-icons/FontAwesome');
+const Icon = require('react-native-vector-icons/FontAwesome');
 
 class MineView extends Component {
   render() {

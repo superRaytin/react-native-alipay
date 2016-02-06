@@ -11,9 +11,9 @@ import styles from '../../styles';
 import TopBar from './common/TopBar';
 
 const MaterialIcons = require('react-native-vector-icons/MaterialIcons');
-var Icon = require('react-native-vector-icons/FontAwesome');
-var fileTextIcon = (<Icon name="file-text-o" size={20} color="#FFFFFF"></Icon>);
-var locationIcon = (<MaterialIcons name="room" size={20} color="#FFFFFF"></MaterialIcons>);
+const Icon = require('react-native-vector-icons/FontAwesome');
+const fileTextIcon = (<Icon name="file-text-o" size={20} color="#FFFFFF"></Icon>);
+const locationIcon = (<MaterialIcons name="room" size={20} color="#FFFFFF"></MaterialIcons>);
 
 class KoubeiView extends Component {
   render() {

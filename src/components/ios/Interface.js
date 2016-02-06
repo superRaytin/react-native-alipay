@@ -15,8 +15,8 @@ import KbView from './KoubeiView';
 import FriendView from './FriendView';
 import MineView from './MineView';
 
-var Icon = require('react-native-vector-icons/FontAwesome');
-var MaterialIcons = require('react-native-vector-icons/MaterialIcons');
+const Icon = require('react-native-vector-icons/FontAwesome');
+const MaterialIcons = require('react-native-vector-icons/MaterialIcons');
 
 const Interface = React.createClass({
   getInitialState() {
