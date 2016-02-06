@@ -81,7 +81,7 @@ const styles = StyleSheet.create(assign({
   quickEntry: {
     flexDirection: 'row',
     backgroundColor: '#3F454F',
-    height: 90,
+    height: 100,
     paddingTop: 0
   },
   quickEntryItem: {
