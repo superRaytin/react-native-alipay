@@ -27,7 +27,7 @@ class AlipayView extends Component {
           <View key="quickEntry" style={styles.quickEntry}>
             <View key="scan" style={styles.quickEntryItem}>
               <Image source={require('../../images/iconfont-scan.png')} style={styles.quickEntryItemIcon} />
-              <Text key="1" style={styles.quickEntryItemText}>扫一扫</Text>
+              <Text key="scan" style={styles.quickEntryItemText}>扫一扫</Text>
             </View>
             <View key="pay" style={styles.quickEntryItem}>
               <Image source={require('../../images/iconfont-paycode.png')} style={styles.quickEntryItemIcon} />
