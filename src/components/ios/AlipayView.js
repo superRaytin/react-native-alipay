@@ -31,7 +31,7 @@ class AlipayView extends Component {
             </View>
             <View key="pay" style={styles.quickEntryItem}>
               <Image source={require('../../images/iconfont-paycode.png')} style={styles.quickEntryItemIcon} />
-              <Text key="1" style={styles.quickEntryItemText}>付款</Text>
+              <Text key="pay" style={styles.quickEntryItemText}>付款</Text>
             </View>
             <View key="discount" style={styles.quickEntryItem}>
               <Image source={require('../../images/iconfont-discount.png')} style={styles.quickEntryItemIcon} />
