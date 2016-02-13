@@ -39,7 +39,7 @@ class AlipayView extends Component {
             </View>
             <View key="xiu" style={styles.quickEntryItem}>
               <Image source={require('../../images/iconfont-dangmianfu-yellow.png')} style={styles.quickEntryItemIcon} />
-              <Text key="1" style={styles.quickEntryItemTextYellow}>咻一咻</Text>
+              <Text key="xiu" style={styles.quickEntryItemTextYellow}>咻一咻</Text>
             </View>
           </View>
           <ScrollView contentContainerStyle={styles.scrollContainer}
