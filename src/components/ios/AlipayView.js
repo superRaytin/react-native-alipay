@@ -49,7 +49,7 @@ class AlipayView extends Component {
                 <View key="appRow-1" style={styles.appRow}>
                   <View key="appCol-1" style={styles.appCol}>
                     <Icon name="credit-card-alt" size={20} color="#FFB44F" style={styles.appItemIcon2} />
-                    <Text key="1" style={styles.appItemText}>信用卡还款</Text>
+                    <Text key="credit-card" style={styles.appItemText}>信用卡还款</Text>
                   </View>
                   <View key="appCol-2" style={styles.appCol}>
                     <Icon name="envelope" size={20} color="#FC6165" style={styles.appItemIcon2} />
