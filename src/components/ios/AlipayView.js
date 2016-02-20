@@ -67,7 +67,7 @@ class AlipayView extends Component {
                 <View key="appRow-2" style={styles.appRow}>
                   <View key="appCol-1" style={styles.appCol}>
                     <Image source={require('../../images/iconfont-koubeilogo.png')} style={styles.appItemIcon} />
-                    <Text key="1" style={styles.appItemText}>口碑外卖</Text>
+                    <Text key="kb-take-out" style={styles.appItemText}>口碑外卖</Text>
                   </View>
                   <View key="appCol-2" style={styles.appCol}>
                     <Image source={require('../../images/iconfont-zhimaxinyong.png')} style={styles.appItemIcon} />
