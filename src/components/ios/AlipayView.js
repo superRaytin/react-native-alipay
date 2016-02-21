@@ -71,7 +71,7 @@ class AlipayView extends Component {
                   </View>
                   <View key="appCol-2" style={styles.appCol}>
                     <Image source={require('../../images/iconfont-zhimaxinyong.png')} style={styles.appItemIcon} />
-                    <Text key="1" style={styles.appItemText}>芝麻信用</Text>
+                    <Text key="zhima-credit" style={styles.appItemText}>芝麻信用</Text>
                   </View>
                   <View key="appCol-3" style={styles.appCol}>
                     <Image source={require('../../images/iconfont-taobao.png')} style={styles.appItemIcon} />
