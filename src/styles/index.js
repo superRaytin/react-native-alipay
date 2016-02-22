@@ -141,6 +141,12 @@ const styles = StyleSheet.create(assign({
     marginTop: 8,
     fontSize: 12
   },
+  appItemTextMore: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ccc',
+  },
 }, {
   banner: {
     marginTop: 15,
