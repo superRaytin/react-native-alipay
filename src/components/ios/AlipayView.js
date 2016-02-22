@@ -143,6 +143,22 @@ class AlipayView extends Component {
                     <Text key="1" style={styles.appItemText}>爱心捐赠</Text>
                   </View>
                 </View>
+                <View key="appRow-3" style={styles.appRow}>
+                  <View key="appCol-1" style={styles.appCol}>
+                    <Image source={require('../../images/iconfont-caipiao.png')} style={styles.appItemIcon} />
+                    <Text key="1" style={styles.appItemText}>彩票</Text>
+                  </View>
+                  <View key="appCol-2" style={styles.appCol}>
+                    <Image source={require('../../images/iconfont-licaixiaogongju.png')} style={styles.appItemIcon} />
+                    <Text key="1" style={styles.appItemText}>理财小工具</Text>
+                  </View>
+                  <View key="appCol-3" style={styles.appCol}>
+                    <Text key="1" style={styles.appItemTextMore}>...</Text>
+                  </View>
+                  <View key="appCol-4" style={styles.appCol}>
+
+                  </View>
+                </View>
               </View>
 
             </View>
