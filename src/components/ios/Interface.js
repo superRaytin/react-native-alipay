@@ -10,7 +10,7 @@ import React, {
 
 import styles from '../../styles';
 
-import AlipayView from './AlipayView';
+import AlipayView from './alipay/Index';
 import KbView from './KoubeiView';
 import FriendView from './FriendView';
 import MineView from './MineView';
