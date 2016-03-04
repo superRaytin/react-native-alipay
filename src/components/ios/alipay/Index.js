@@ -5,6 +5,7 @@ import React, {
     Image,
     Navigator,
     ScrollView,
+    StyleSheet,
     Text,
     TouchableHighlight,
     TouchableOpacity,
@@ -12,11 +13,21 @@ import React, {
 } from 'react-native';
 
 import assign from 'object-assign';
-import TopBar from './../common/TopBar';
-import styles from '../../../styles';
+import NavBar from './../common/NavBar';
+import AppList from './AppList';
 import AppMoreView from './AppMore';
 import AppInfoView from './AppInfo';
+import QuickEntry from './QuickEntry';
+import Banner from './Banner';
 
+// 样式
+import CommonStyles from '../../../styles/common';
+import TopBarStyles from '../../../styles/topBar';
+import QuickEntryStyles from '../../../styles/quickEntry';
+import AppListStyles from '../../../styles/appList';
+import BannerStyles from '../../../styles/banner';
+
+// 字体
 const Icon = require('react-native-vector-icons/FontAwesome');
 const MaterialIcons = require('react-native-vector-icons/MaterialIcons');
 const angleLeftIcon = (<Icon name="angle-left" size={20} color="#FFFFFF"></Icon>);
@@ -190,102 +201,34 @@ const appListData = [
 
 const AlipayView = React.createClass({
   handleAppClick(appInfo) {
-    this.navigatorPush('app', appInfo.title, AppInfoView, appInfo.options);
+    this.navigatorPush('app', appInfo.title, AppInfoView, assign({backButtonText: '支付宝'}, appInfo.options));
   },
 
-  getAppItems(data, opt = {}) {
-    const appRowList = data.map((row, rowIndex) => {
-      const appColList = row.map((col, colIndex) => {
-
-        // 查看更多
-        if (col.isMore) {
-          return (
-              <View key={'appCol-' + colIndex} style={styles.appCol}>
-                <TouchableHighlight
-                    underlayColor="#B5B5B5"
-                    onPress={() => { this.navigatorPush('appMore', '更多', AppMoreView); }}>
-                  <Text style={styles.appItemTextMore}>...</Text>
-                </TouchableHighlight>
-              </View>
-          );
-        }
-
-        // 空的九宫格
-        if (!col.title) {
-          return (
-              <View key={'appCol-' + colIndex} style={styles.appCol}></View>
-          );
-        }
-
-        let icon;
-        if (col.image) {
-          icon = <Image source={col.image.source} style={styles.appItemImageIcon}/>;
-        } else if (col.icon) {
-          const iconSize = col.icon.size || 20;
-          const iconColor = col.icon.color || '#56abe4';
-          icon = <Icon name={col.icon.name} size={iconSize} color={iconColor} style={styles.appItemIcon}/>;
-        }
-
-        return (
-            <View key={'appCol-' + colIndex} style={styles.appCol}>
-              <TouchableOpacity style={{flex: 1, alignItems: 'center'}}
-                                onPress={() => { this.handleAppClick(col); }}>
-                {icon}
-                <Text style={styles.appItemText}>{col.title}</Text>
-              </TouchableOpacity>
-            </View>
-        );
-      });
-
-      let rowStyle = styles.appRow;
-      if (opt.topBorder && rowIndex === 0) {
-        rowStyle = styles.appRowTopBorder;
-      }
-
-      return (
-          <View key={'appRow-' + rowIndex} style={rowStyle}>
-            {appColList}
-          </View>
-      );
-    });
-
-    return appRowList;
+  onMorePress() {
+    this.navigatorPush('appMore', '更多', AppMoreView, {backButtonText: '支付宝'});
   },
 
   render() {
     return (
         <View style={styles.container}>
-          <View key="quickEntry" style={styles.quickEntry}>
-            <View key="scan" style={styles.quickEntryItem}>
-              <Image source={require('../../../images/iconfont-scan.png')} style={styles.quickEntryItemIcon}/>
-              <Text key="scan" style={styles.quickEntryItemText}>扫一扫</Text>
-            </View>
-            <View key="pay" style={styles.quickEntryItem}>
-              <Image source={require('../../../images/iconfont-paycode.png')} style={styles.quickEntryItemIcon}/>
-              <Text key="pay" style={styles.quickEntryItemText}>付款</Text>
-            </View>
-            <View key="discount" style={styles.quickEntryItem}>
-              <Image source={require('../../../images/iconfont-discount.png')} style={styles.quickEntryItemIcon}/>
-              <Text key="discount" style={styles.quickEntryItemText}>卡券</Text>
-            </View>
-            <View key="xiu" style={styles.quickEntryItem}>
-              <Image source={require('../../../images/iconfont-dangmianfu-yellow.png')} style={styles.quickEntryItemIcon}/>
-              <Text key="xiu" style={styles.quickEntryItemTextYellow}>咻一咻</Text>
-            </View>
-          </View>
-          <ScrollView contentContainerStyle={styles.scrollContainer}
+          <QuickEntry styles={styles} />
+          <ScrollView contentContainerStyle={styles.scrollContainerApp}
                       automaticallyAdjustContentInsets={true}>
             <View key="content" style={styles.content}>
               <View key="app" style={styles.app}>
-                {this.getAppItems(appListData.slice(0, 3))}
+                <AppList styles={styles}
+                         data={appListData.slice(0, 3)}
+                         topBorder={false}
+                         onMorePress={this.onMorePress}
+                         onAppPress={this.handleAppClick} />
               </View>
-
-              <View key="banner" style={styles.banner}>
-                <Image source={require('../../../images/banner.png')} style={styles.bannerImage}/>
-              </View>
-
-              <View key="app2" style={styles.app}>
-                {this.getAppItems(appListData.slice(3), {topBorder: true})}
+              <Banner styles={styles} />
+              <View key="app-2" style={styles.app}>
+                <AppList styles={styles}
+                         data={appListData.slice(3)}
+                         topBorder={true}
+                         onMorePress={this.onMorePress}
+                         onAppPress={this.handleAppClick} />
               </View>
             </View>
           </ScrollView>
@@ -306,7 +249,7 @@ const AlipayView = React.createClass({
 const NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     // “支付宝” 首页左上角 “账单” 按钮
-    if (route.name === 'home') {
+    if (route.name === 'alipay-index') {
       return (
         <TouchableOpacity>
           <Text key="topBarBill" style={styles.topBarBill}>{fileTextIcon}&nbsp;&nbsp;账单</Text>
@@ -314,14 +257,11 @@ const NavigationBarRouteMapper = {
       );
     }
 
-    let backButtonText = route.backButtonText || '支付宝';
-
     return (
-      <TouchableOpacity
-          onPress={() => navigator.pop()}
-          style={{marginTop: 10}}>
-        <Text key="topBarBack" style={styles.topBarBack}>{angleLeftIcon}&nbsp;&nbsp;{backButtonText}</Text>
-      </TouchableOpacity>
+        <NavBar.BackButton styles={styles}
+                           text={route.backButtonText}
+                           onPress={() => navigator.pop()}
+                           style={{marginTop: 10}} />
     );
   },
 
@@ -329,11 +269,9 @@ const NavigationBarRouteMapper = {
     // 如果页面自定义了导航的右侧按钮，则用自定义的
     if (route.RightButton) {
       return (
-        <View key="topBarOptions" style={styles.topBarOptions}>
-          <View>
+          <NavBar.RightButton styles={styles}>
             {route.RightButton}
-          </View>
-        </View>
+          </NavBar.RightButton>
       );
     }
 
@@ -342,26 +280,15 @@ const NavigationBarRouteMapper = {
     }
 
     return (
-      <View key="topBarOptions" style={styles.topBarOptions}>
-        <View>
+        <NavBar.RightButton styles={styles}>
           <Text key="topBarIcon" style={styles.topBarIcon}>{personIcon}&nbsp;&nbsp;{searchIcon}&nbsp;&nbsp;{addIcon}</Text>
-        </View>
-      </View>
+        </NavBar.RightButton>
     );
   },
 
   Title(route, navigator, index, navState) {
-    // 没有设置 title 字段，则不显示
-    if (typeof route.title === 'undefined') {
-      return null;
-    }
-
     return (
-      <TouchableOpacity style={{flex: 1, justifyContent: 'center'}}>
-        <Text style={{color: 'white', fontSize: 16, fontWeight: 'bold'}}>
-          {route.title}
-        </Text>
-      </TouchableOpacity>
+        <NavBar.Title styles={styles} title={route.title} />
     );
   }
 };
@@ -375,7 +302,7 @@ const Main = React.createClass({
 
   render() {
     return (
-        <Navigator initialRoute={{name: 'home', component: AlipayView}}
+        <Navigator initialRoute={{name: 'alipay-index', component: AlipayView}}
                    configureScene={() => { return Navigator.SceneConfigs.FloatFromRight }}
                    navigationBar={
                     <Navigator.NavigationBar style={{backgroundColor: '#3F454F', alignItems: 'center'}} routeMapper={NavigationBarRouteMapper} />
@@ -384,5 +311,14 @@ const Main = React.createClass({
     );
   }
 });
+
+const styles = StyleSheet.create(assign(
+    {},
+    CommonStyles,
+    TopBarStyles,
+    QuickEntryStyles,
+    AppListStyles,
+    BannerStyles
+));
 
 export default Main;

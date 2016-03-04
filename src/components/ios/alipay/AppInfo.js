@@ -11,12 +11,13 @@ import React, {
 } from 'react-native';
 
 import assign from 'object-assign';
+import CommonStyles from '../../../styles/common';
 
 const AppInfoView = React.createClass({
   render() {
     return (
         <View style={styles.container}>
-          <ScrollView contentContainerStyle={styles.scrollContainerNormal}
+          <ScrollView contentContainerStyle={styles.scrollContainer}
                       automaticallyAdjustContentInsets={true}>
             <View key="content" style={styles.content}>
               <View style={{alignItems: 'center', padding: 10}}>
@@ -29,22 +30,9 @@ const AppInfoView = React.createClass({
   },
 });
 
-const styles = StyleSheet.create(assign({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F5F9',
-  },
-  scrollContainerNormal: {
-    backgroundColor: '#F5F5F9',
-    paddingBottom: 15,
-    marginTop: 64,
-  },
-  content: {
-    backgroundColor: '#F5F5F9',
-    flex: 1,
-  },
-}, {
-
-}));
+const styles = StyleSheet.create(assign(
+    {},
+    CommonStyles
+));
 
 export default AppInfoView;
