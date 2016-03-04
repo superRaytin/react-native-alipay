@@ -23,6 +23,13 @@ const TopBarStyles = {
     fontSize: 16,
     color: '#fff',
   },
+  topBarCity: {
+    width: 80,
+    marginTop: 10,
+    textAlign: 'center',
+    fontSize: 14,
+    color: '#fff',
+  },
   topBarBack: {
     width: 60,
     marginLeft: 10,

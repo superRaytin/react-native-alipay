@@ -3,17 +3,16 @@
 import React, {
     Component,
     Image,
+    StyleSheet,
     TabBarIOS,
     Text,
     View
 } from 'react-native';
 
-import styles from '../../styles';
-
 import AlipayView from './alipay/Index';
-import KbView from './KoubeiView';
-import FriendView from './FriendView';
-import MineView from './MineView';
+import KoubeiView from './koubei/Index';
+import FriendView from './friend/Index';
+import MineView from './mine/Index';
 
 const Icon = require('react-native-vector-icons/FontAwesome');
 const MaterialIcons = require('react-native-vector-icons/MaterialIcons');
@@ -51,9 +50,9 @@ const Interface = React.createClass({
           <TabBarIOS.Item key="kb"
                           icon={{uri: koubeiBase64Icon, scale: 2.5}}
                           title="口碑"
-                          selected={this.state.selectedTab === 'KbView'}
-                          onPress={() => { this.onPress('KbView'); }}>
-            <KbView />
+                          selected={this.state.selectedTab === 'KoubeiView'}
+                          onPress={() => { this.onPress('KoubeiView'); }}>
+            <KoubeiView />
           </TabBarIOS.Item>
           <MaterialIcons.TabBarItem key="friend"
                                     iconName="people"
