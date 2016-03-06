@@ -18,7 +18,7 @@ const MaterialIcons = require('react-native-vector-icons/MaterialIcons');
 const Interface = React.createClass({
   getInitialState() {
     return {
-      selectedTab: 'Home'
+      selectedTab: 'AlipayView'
     };
   },
 
@@ -39,8 +39,8 @@ const Interface = React.createClass({
           <TabBarIOS.Item key="alipay"
                           icon={{uri: alipayLogoIcon, scale: 2}}
                           title="支付宝"
-                          selected={this.state.selectedTab === 'Home'}
-                          onPress={() => { this.onPress('Home'); }}>
+                          selected={this.state.selectedTab === 'AlipayView'}
+                          onPress={() => { this.onPress('AlipayView'); }}>
             <AlipayView />
           </TabBarIOS.Item>
           <TabBarIOS.Item key="kb"
