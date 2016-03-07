@@ -154,6 +154,7 @@ const AppMoreView = React.createClass({
 });
 
 const styles = StyleSheet.create(assign(
+    {},
     CommonStyles,
     AppListStyles,
     {
