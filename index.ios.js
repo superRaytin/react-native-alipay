@@ -5,9 +5,9 @@ import React, {
     StatusBarIOS,
 } from 'react-native';
 
-import Interface from './src/components/ios/Interface';
+import Entry from './src/components/ios/Entry';
 
 // 将状态栏字体设置成白色
 StatusBarIOS.setStyle('light-content');
 
-AppRegistry.registerComponent('AlipayAppUI', () => Interface);
+AppRegistry.registerComponent('AlipayAppUI', () => Entry);
