@@ -96,8 +96,8 @@ const Main = React.createClass({
         <Navigator initialRoute={{name: 'friend-index', component: FriendView}}
                    configureScene={() => { return Navigator.SceneConfigs.FloatFromRight }}
                    navigationBar={
-                      <Navigator.NavigationBar style={{backgroundColor: '#3F454F', alignItems: 'center'}} routeMapper={NavigationBarRouteMapper} />
-                     }
+                    <Navigator.NavigationBar style={{backgroundColor: '#3F454F', alignItems: 'center'}} routeMapper={NavigationBarRouteMapper} />
+                   }
                    renderScene={this.renderScene}></Navigator>
     );
   }
