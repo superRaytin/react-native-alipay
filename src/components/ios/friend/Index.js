@@ -86,8 +86,8 @@ const NavigationBarRouteMapper = {
 
 const Main = React.createClass({
   renderScene(route, navigator) {
-      if (route.component) {
-        return React.createElement(route.component, { ...this.props, ...route.passProps, navigator, route } );
+    if (route.component) {
+      return React.createElement(route.component, { ...this.props, ...route.passProps, navigator, route } );
     }
   },
 
