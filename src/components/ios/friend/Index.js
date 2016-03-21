@@ -7,6 +7,7 @@ import React, {
     ScrollView,
     StyleSheet,
     Text,
+    TouchableOpacity,
     View
 } from 'react-native';
 
@@ -32,7 +33,21 @@ class FriendView extends Component {
                       automaticallyAdjustContentInsets={true}>
             <View key="content" style={styles.content}>
               <View style={{alignItems: 'center', padding: 10}}>
-                <Text>content of 朋友</Text>
+                <View key="list-container">
+                  <TouchableOpacity style={{flex: 1, alignItems: 'center'}}
+                                    onPress={() => { onAppPress(col); }}>
+                    <View key="friend-list-item">
+                      <Image source={require('../../../images/iconfont-jipiao.png')}
+                             style={{width: 30, height: 30}}/>
+                      <View key="friend-list-item-title">
+                        <Text>sfafsd</Text>
+                      </View>
+                      <View key="friend-list-item-desc">
+                        <Text>kjjjj</Text>
+                      </View>
+                    </View>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </ScrollView>
