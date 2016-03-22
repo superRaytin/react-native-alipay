@@ -40,10 +40,10 @@ class FriendView extends Component {
                       <Image source={require('../../../images/iconfont-jipiao.png')}
                              style={{width: 30, height: 30}}/>
                       <View key="friend-list-item-title">
-                        <Text>sfafsd</Text>
+                        <Text>title</Text>
                       </View>
                       <View key="friend-list-item-desc">
-                        <Text>kjjjj</Text>
+                        <Text>description</Text>
                       </View>
                     </View>
                   </TouchableOpacity>
